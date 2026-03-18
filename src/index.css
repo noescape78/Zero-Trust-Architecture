@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #8b5cf6; /* Violet */
+    --color-secondary: #06b6d4; /* Cyan */
+  }
+
+  body {
+    @apply bg-surface-50 text-surface-800 antialiased selection:bg-primary-500/30 selection:text-primary-900;
+    font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Premium Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-300 rounded-full hover:bg-surface-400 transition-colors duration-300;
+  }
+
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d4d4d8 transparent;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-cyan-500;
+  }
+  
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-glass border border-white/40 shadow-glass;
+  }
+
+  .glass-panel-dark {
+    @apply bg-surface-900/60 backdrop-blur-glass border border-surface-700/40 shadow-glass;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-sm hover:shadow-glass-hover hover:border-primary-200/50 transition-all duration-300;
+  }
+
+  /* Shimmer Loading Effect for Skeletons */
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Subtle moving background pattern for panels */
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    mask-image: linear-gradient(to bottom, transparent, black, transparent);
+  }
+  
+  /* Text glow for active states */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+}
+
+/* Animations that are better handled in pure CSS */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Smooth Focus Rings */
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-50;
+}
+
+/* Premium Blob Backgrounds */
+.blob-shape {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}

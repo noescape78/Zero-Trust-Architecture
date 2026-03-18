@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import {
   File, FileText, Image, Film, Music, Archive,
   Code, Share2, Trash2,
-  Clock, HardDrive, Shield, Zap
+  HardDrive, Shield
 } from 'lucide-react';
 import { formatSize, formatDate } from '../../utils/formatters';
 import { getFileType } from '../../utils/fileHelpers';

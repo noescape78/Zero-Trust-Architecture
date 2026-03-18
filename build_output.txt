@@ -2,7 +2,7 @@
 > securevault-client@1.0.0 build
 > react-scripts build
 
-(node:7932) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(node:18888) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
 (Use `node --trace-deprecation ...` to show where the warning was created)
 Creating an optimized production build...
 Compiled with warnings.
@@ -12,49 +12,35 @@ src\components\modals\ConfirmModal.jsx
   Line 2:45:  'Shield' is defined but never used  no-unused-vars
   Line 4:8:   'Button' is defined but never used  no-unused-vars
 
-src\components\modals\ShareModal.jsx
-  Line 3:76:  'Zap' is defined but never used     no-unused-vars
-  Line 5:8:   'Button' is defined but never used  no-unused-vars
-
-src\components\ui\FileCard.jsx
-  Line 5:3:   'Clock' is defined but never used  no-unused-vars
-  Line 5:29:  'Zap' is defined but never used    no-unused-vars
-
 src\pages\Upload.js
-  Line 6:8:    'Button' is defined but never used          no-unused-vars
-  Line 7:8:    'Input' is defined but never used           no-unused-vars
-  Line 15:24:  'Lock' is defined but never used            no-unused-vars
-  Line 15:30:  'Activity' is defined but never used        no-unused-vars
-  Line 16:17:  'ArrowLeft' is defined but never used       no-unused-vars
-  Line 16:28:  'Layers' is defined but never used          no-unused-vars
-  Line 27:10:  'error' is assigned a value but never used  no-unused-vars
+  Line 14:24:  'Lock' is defined but never used  no-unused-vars
 
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
 File sizes after gzip:
 
-  140.99 kB  build\static\js\main.c3f74886.js
-  12.54 kB   build\static\css\main.8542d452.css
-  8.97 kB    build\static\js\163.7ebd7078.chunk.js
-  6.91 kB    build\static\js\888.ab3ca65e.chunk.js
-  6.49 kB    build\static\js\298.230f70e5.chunk.js
-  6.21 kB    build\static\js\589.5c4612fe.chunk.js
-  6.11 kB    build\static\js\559.35181c3f.chunk.js
-  6 kB       build\static\js\543.05da931e.chunk.js
-  5.89 kB    build\static\js\594.c655d2e2.chunk.js
-  5.88 kB    build\static\js\125.4c25a968.chunk.js
-  5.53 kB    build\static\js\436.ba93f969.chunk.js
-  5.47 kB    build\static\js\955.8b806cd2.chunk.js
-  5.33 kB    build\static\js\66.0244d839.chunk.js
-  5.31 kB    build\static\js\524.8f40ad9b.chunk.js
-  5.2 kB     build\static\js\768.c93f737e.chunk.js
-  4.76 kB    build\static\js\200.306558d6.chunk.js
-  4.65 kB    build\static\js\495.ed02ef58.chunk.js
-  4.29 kB    build\static\js\876.d998ccf9.chunk.js
-  4.06 kB    build\static\js\7.c24882fb.chunk.js
-  2.83 kB    build\static\js\706.01611412.chunk.js
-  1.77 kB    build\static\js\453.23fe4739.chunk.js
+  140.99 kB            build\static\js\main.f5609b92.js
+  12.54 kB             build\static\css\main.8542d452.css
+  10.61 kB (+1.64 kB)  build\static\js\163.e995a9b4.chunk.js
+  6.91 kB              build\static\js\888.ab3ca65e.chunk.js
+  6.49 kB              build\static\js\298.230f70e5.chunk.js
+  6.21 kB              build\static\js\589.5c4612fe.chunk.js
+  6 kB                 build\static\js\543.05da931e.chunk.js
+  5.89 kB              build\static\js\594.c655d2e2.chunk.js
+  5.88 kB              build\static\js\867.fa3dcba4.chunk.js
+  5.88 kB              build\static\js\125.4c25a968.chunk.js
+  5.47 kB              build\static\js\955.8b806cd2.chunk.js
+  5.33 kB              build\static\js\66.0244d839.chunk.js
+  5.31 kB              build\static\js\524.8f40ad9b.chunk.js
+  5.2 kB               build\static\js\768.c93f737e.chunk.js
+  4.76 kB              build\static\js\200.306558d6.chunk.js
+  4.65 kB              build\static\js\495.ed02ef58.chunk.js
+  4.29 kB              build\static\js\876.d998ccf9.chunk.js
+  4.06 kB              build\static\js\7.c24882fb.chunk.js
+  3.79 kB              build\static\js\620.332d126a.chunk.js
+  2.83 kB              build\static\js\706.01611412.chunk.js
+  1.77 kB              build\static\js\453.23fe4739.chunk.js
 
 The project was built assuming it is hosted at /.
 You can control this with the homepage field in your package.json.

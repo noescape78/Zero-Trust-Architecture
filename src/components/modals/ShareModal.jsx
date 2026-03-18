@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, Clock, Download, Copy, Check, File, Info, Sparkles, Shield, Zap, ChevronRight } from 'lucide-react';
+import { Lock, Clock, Download, Copy, Check, File, Info, Sparkles, Shield, ChevronRight } from 'lucide-react';
 import Modal from '../ui/Modal';
-import Button from '../ui/Button';
+
 import { filesAPI, getErrorMessage } from '../../services/api';
 import { useToast } from '../../context/ToastContext';
 import { copyToClipboard } from '../../utils/clipboard';

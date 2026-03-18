@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "../components/Layout";
 import Sidebar from "../components/layout/Sidebar";
-import Button from "../components/ui/Button";
-import Input from "../components/ui/Input";
+
 import { useToast } from "../context/ToastContext";
 import { useDragAndDrop } from "../hooks";
 import { filesAPI, getErrorMessage } from "../services/api";
@@ -12,8 +11,8 @@ import { validateFileSize } from "../utils/fileHelpers";
 import { formatSize } from "../utils/formatters";
 import {
   Upload as UploadIcon, File, Image, FileText,
-  X, ShieldCheck, Zap, Lock, Activity, 
-  ChevronRight, ArrowLeft, Layers, Shield
+  X, ShieldCheck, Zap, Lock, 
+  ChevronRight, Shield
 } from "lucide-react";
 
 export default function UploadFile() {
@@ -24,7 +23,6 @@ export default function UploadFile() {
   const [file, setFile] = useState(null);
   const [saveAs, setSaveAs] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploadState, setUploadState] = useState('idle'); // idle, uploading, success
 
@@ -36,13 +34,11 @@ export default function UploadFile() {
     const validation = validateFileSize(selectedFile, 50 * 1024 * 1024);
 
     if (!validation.valid) {
-      setError(validation.error);
       toast.error(validation.error);
       return;
     }
 
     setFile(selectedFile);
-    setError("");
     setUploadProgress(0);
     setUploadState('idle');
 
@@ -54,7 +50,6 @@ export default function UploadFile() {
 
   const handleUpload = async () => {
     if (!file) {
-      setError("Please select a file to upload");
       return;
     }
 
@@ -64,7 +59,6 @@ export default function UploadFile() {
 
     try {
       setLoading(true);
-      setError("");
       setUploadState('uploading');
       setUploadProgress(0);
 
@@ -90,7 +84,6 @@ export default function UploadFile() {
       }, 2500);
     } catch (err) {
       const message = getErrorMessage(err);
-      setError(message);
       toast.error(message);
       setUploadState('idle');
       setUploadProgress(0);
@@ -102,7 +95,6 @@ export default function UploadFile() {
   const clearFile = () => {
     setFile(null);
     setSaveAs("");
-    setError("");
     setUploadProgress(0);
     setUploadState('idle');
     if (fileInputRef.current) {

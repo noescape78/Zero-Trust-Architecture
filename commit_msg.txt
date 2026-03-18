@@ -1,1 +1,1 @@
-Final build fixes: removed unused imports and variables  
+Final cleanup: removed unused Shield and Button from ConfirmModal and Lock from Upload  

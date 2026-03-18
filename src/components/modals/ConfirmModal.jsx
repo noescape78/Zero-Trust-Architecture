@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { AlertTriangle, Check, AlertCircle, Shield } from 'lucide-react';
+import { AlertTriangle, Check, AlertCircle } from 'lucide-react';
 import Modal from '../ui/Modal';
-import Button from '../ui/Button';
 
 /**
  * ConfirmModal - Redesigned for Dark Premium Theme

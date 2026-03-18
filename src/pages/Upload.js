@@ -11,7 +11,7 @@ import { validateFileSize } from "../utils/fileHelpers";
 import { formatSize } from "../utils/formatters";
 import {
   Upload as UploadIcon, File, Image, FileText,
-  X, ShieldCheck, Zap, Lock, 
+  X, ShieldCheck, Zap, 
   ChevronRight, Shield
 } from "lucide-react";
 
